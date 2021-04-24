@@ -1,5 +1,5 @@
 #  Multiplication Rocket 🚀
-The game can be played online [here](https://studio.code.org/projects/gamelab/g6Y0pDHrPw5891uhNjIhSvYG46VQuNZ69129d8T-fL4/embed)
+The game can be played online [here](https://studio.code.org/projects/gamelab/g6Y0pDHrPw5891uhNjIhSvYG46VQuNZ69129d8T-fL4/embed).
 
 This game is a fun practice for elemetary students to practice multiplication table, thus enable them to have fun with math if not already 😆
 
