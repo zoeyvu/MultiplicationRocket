@@ -42,14 +42,14 @@ rocket.visible = false;
 rocket.setCollider("rectangle", 0, -5, 15, 35, 0);
 rocket.debug = true;
 
-var meteo1R = createSprite(randomNumber(200, 500), 450);
+var meteo1R = createSprite(randomNumber(200, 500), 600);
 meteo1R.setAnimation("meteo1r");
 meteo1R.scale = 0.10;
 meteo1R.visible = false;
 meteo1R.setCollider("rectangle", 5, -5, 25, 50, 45);
 meteo1R.debug = true;
 
-var meteo2R = createSprite(randomNumber(150, 500), 500);
+var meteo2R = createSprite(randomNumber(150, 500), 600);
 meteo2R.setAnimation("meteo2r");
 meteo2R.scale = 0.10;
 meteo2R.visible = true;
@@ -57,14 +57,14 @@ meteo2R.setCollider("rectangle", 5, -5, 25, 50, 45);
 meteo2R.debug = true;
 
 
-var meteo1L = createSprite(randomNumber(-100, 150), 450);
+var meteo1L = createSprite(randomNumber(-100, 150), 600);
 meteo1L.setAnimation("meteo1l");
 meteo1L.scale = 0.10;
 meteo1L.visible = false;
 meteo1L.setCollider("rectangle", -5, -5, 25, 50, -45);
 meteo1L.debug = true;
 
-var meteo2L = createSprite(randomNumber(-100, 150), 500);
+var meteo2L = createSprite(randomNumber(-100, 150), 600);
 meteo2L.setAnimation("meteo2l");
 meteo2L.scale = 0.10;
 meteo2L.visible = false;
@@ -115,6 +115,7 @@ function playMode() {
   background(rgb(28, 7, 71));
   meteoMoving();
   setQuestion();
+  setMeteoVisible();
   checkHit();
   if ((life == 0)|| (life < 0)) {
       mode = 4;
@@ -225,19 +226,23 @@ function meteoStart() {
     if (meteo1L.y > 400) {
       meteo1L.x = rocket.x - rocket.y;
       meteo1L.y = 0;
+      meteo1L.visible = false
     } else {
       meteo2L.x = rocket.x - rocket.y;
       meteo2L.y = 0;
+      meteo2L.visible = false
     }
   } else if (answer*4 <= 200) {
     if (meteo1R.y > 400) {
       meteo1R.x = rocket.x + rocket.y;
       meteo1R.y = 0;
+      meteo1R.visible = false
     } else if (meteo1R != meteo2R) {
       meteo2R.x = rocket.x + rocket.y;
       meteo2R.y = 0;
+      meteo2R.visible = false
     }
-  }
+  };
 }
 
 function meteoStartLoop () {
@@ -354,7 +359,7 @@ function timesTable() {
   fill("White");
   textSize(20);
   textFont("Courier New");
-  text("Creator: Zoey Vu", 70, 100);
+  text("Creator: Zoey Nguyen Vu", 70, 100);
   text("January, 2018", 70, 135);
   text("ICS3C class", 70, 170);
   text("Teacher: Ms. DiTiberio", 70, 205);
@@ -388,10 +393,31 @@ function overMode() {
 //other function
 function setVisible(set){
   rocket.visible = set;
-  meteo1R.visible = set;
-  meteo2R.visible = set;
-  meteo1L.visible = set;
-  meteo2L.visible = set;
+}
+
+function setMeteoVisible() {
+    if (meteo1R.y != 0) {
+    meteo1R.visible = true
+  } else {
+    meteo1R.visible = false
+  }
+  
+    if (meteo2R.y != 0) {
+    meteo2R.visible = true
+  } else {
+    meteo2R.visible = false
+  }
+  
+    if (meteo1L.y != 0) {
+    meteo1L.visible = true
+  } else {
+    meteo1L.visible = false
+  }
+   if (meteo2L.y != 0) {
+    meteo2L.visible = true
+  } else {
+    meteo2L.visible = false
+  }
 }
 
 // -----
