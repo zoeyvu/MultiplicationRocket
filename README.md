@@ -15,6 +15,6 @@ Music is also math! 🎹🎶
 
 ---
 
-Note: The project was build with Code.org Game lab. However, Code.org is unable to export project correctly. To read the code and interact with the game live, use the link below:
+Note: The project was build with Code.org Game lab. Due to existing bugs, Code.org is unable to export index.html file for Game Lab correctly. The uploaded files may not run ex expected. 
 
-https://studio.code.org/projects/gamelab/g6Y0pDHrPw5891uhNjIhSvYG46VQuNZ69129d8T-fL4/embed
+Click [here](https://studio.code.org/projects/gamelab/g6Y0pDHrPw5891uhNjIhSvYG46VQuNZ69129d8T-fL4/embed) to see demo of the game.
